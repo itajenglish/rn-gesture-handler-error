@@ -1,0 +1,40 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true,
+    "react-native/react-native": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+    "plugin:security/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/recommended"
+  ],
+  "plugins": ["jest", "security", "prettier", "react", "react-native"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    // Temporarily disabled 'import/no-extraneous-dependencies' because of error occurrences in the codebase linked to '@gorhom/bottom-sheet' library.
+    "import/no-extraneous-dependencies": "off",
+    "import/named": "off",
+    "no-console": "error",
+    "func-names": "off",
+    "no-underscore-dangle": "off",
+    "consistent-return": "off",
+    "jest/expect-expect": "off",
+    "security/detect-object-injection": "off",
+    "react/prefer-stateless-function": 1
+  }
+}
